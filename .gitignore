@@ -14,7 +14,11 @@
 /coverage
 
 # next.js
-/.next/
+.next/
+apps/web/.next/
+
+# nest
+apps/api/dist/
 /.idea/
 /out/
 
