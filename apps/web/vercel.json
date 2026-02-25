@@ -1,4 +1,4 @@
 {
-  "buildCommand": "cd ../.. && turbo build --filter=web",
-  "installCommand": "cd ../.. && yarn install"
+  "installCommand": "cd ../.. && yarn install",
+  "buildCommand": "cd ../.. && yarn workspace web build"
 }

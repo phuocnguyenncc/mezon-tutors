@@ -80,32 +80,6 @@ yarn install
 cp .env.example .env
 ```
 
-### Development
-
-```bash
-# Run both web + API (Turborepo)
-yarn dev
-
-# Or run individually
-yarn dev:web   # Next.js → http://localhost:3000
-yarn dev:api   # NestJS → http://localhost:4000
-```
-
-Open [http://localhost:3000](http://localhost:3000) for the web app, [http://localhost:4000](http://localhost:4000) for the API.
-
----
-
-## CI/CD (GitHub Actions)
-
-Workflow `.github/workflows/ci.yml` chạy trên **push to main** và **pull request** vào main:
-
-1. **Lint** — Validate code style
-2. **Build** — Đảm bảo build thành công
-
-> **Vercel**: Khi đã connect repo, Vercel tự động deploy mỗi khi merge vào main. GitHub Actions chạy CI trước để validate.
-
----
-
 ## Project Structure
 
 ```
