@@ -1,4 +1,4 @@
 {
-  "installCommand": "cd ../.. && yarn install",
-  "buildCommand": "cd ../.. && yarn workspace web build"
+  "installCommand": "yarn install",
+  "buildCommand": "yarn build"
 }
