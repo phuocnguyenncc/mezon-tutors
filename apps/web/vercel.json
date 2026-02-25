@@ -1,0 +1,5 @@
+{
+  "buildCommand": "cd ../.. && turbo build --filter=web",
+  "installCommand": "cd ../.. && yarn install",
+  "ignoreCommand": "cd ../.. && npx turbo-ignore web --fallback=HEAD^1"
+}

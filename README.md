@@ -95,6 +95,17 @@ Open [http://localhost:3000](http://localhost:3000) for the web app, [http://loc
 
 ---
 
+## CI/CD (GitHub Actions)
+
+Workflow `.github/workflows/ci.yml` chạy trên **push to main** và **pull request** vào main:
+
+1. **Lint** — Validate code style
+2. **Build** — Đảm bảo build thành công
+
+> **Vercel**: Khi đã connect repo, Vercel tự động deploy mỗi khi merge vào main. GitHub Actions chạy CI trước để validate.
+
+---
+
 ## Project Structure
 
 ```
