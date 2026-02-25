@@ -1,4 +1,5 @@
 import { defineConfig } from 'eslint/config';
+import tsParser from '@typescript-eslint/parser';
 
 export default defineConfig([
   {
@@ -7,9 +8,14 @@ export default defineConfig([
   {
     files: ['src/**/*.ts'],
     languageOptions: {
+      parser: tsParser,
       parserOptions: {
         ecmaVersion: 2022,
         sourceType: 'module',
+        ecmaFeatures: {
+          experimentalDecorators: true,
+          legacyDecorators: true,
+        },
       },
       globals: {
         console: 'readonly',
