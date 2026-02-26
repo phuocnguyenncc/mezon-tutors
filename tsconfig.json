@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "strictNullChecks": true,
+    "noUncheckedIndexedAccess": true,
+    "paths": {
+      "@mezon-tutors/app/*": [
+        "./packages/app/*"
+      ]
+    }
+  },
+  "extends": "./tsconfig.base",
+  "exclude": [
+    "**/node_modules",
+    "**/dist",
+    "**/types",
+    "apps/web/out",
+    "apps/web/.next",
+    "apps/web/.tamagui"
+  ]
+}
