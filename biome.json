@@ -1,0 +1,121 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
+  "files": {
+    "ignore": ["**/ios/**", "**/android/**", "**/node_modules/**", "**/.tamagui/**", "**/dist/**"]
+  },
+  "organizeImports": {
+    "enabled": false
+  },
+  "linter": {
+    "enabled": true,
+    "ignore": [
+      ".tamagui",
+      "**/ios/**",
+      "**/android/**",
+      ".vscode",
+      "**/tamagui.css",
+      "**/*.d.ts",
+      "packages/vendor/**",
+      "packages/**/vendor/**",
+      "**/tsconfig.json",
+      "**/dist/**",
+      "**/package.json",
+      ".codesandbox",
+      "tsconfig.base.json"
+    ],
+
+    "rules": {
+      "correctness": {
+        "useExhaustiveDependencies": "off",
+        "noInnerDeclarations": "off",
+        "noUnnecessaryContinue": "off",
+        "noConstructorReturn": "off"
+      },
+      "suspicious": {
+        "noImplicitAnyLet": "off",
+        "noConfusingVoidType": "off",
+        "noEmptyInterface": "off",
+        "noArrayIndexKey": "off",
+        "noDoubleEquals": "off",
+        "noConsoleLog": "off",
+        "noAssignInExpressions": "off",
+        "noExplicitAny": "error",
+        "noRedeclare": "off"
+      },
+      "style": {
+        "noParameterAssign": "off",
+        "noNonNullAssertion": "off",
+        "noArguments": "off",
+        "noUnusedTemplateLiteral": "off",
+        "useDefaultParameterLast": "off",
+        "useConst": "off",
+        "useEnumInitializers": "off",
+        "useTemplate": "off",
+        "useSelfClosingElements": "off",
+        "useImportType": "off"
+      },
+      "security": {
+        "noDangerouslySetInnerHtml": "off",
+        "noDangerouslySetInnerHtmlWithChildren": "off"
+      },
+      "performance": {
+        "noDelete": "off",
+        "noAccumulatingSpread": "off"
+      },
+      "complexity": {
+        "noForEach": "off",
+        "noBannedTypes": "off",
+        "noUselessFragments": "off",
+        "useLiteralKeys": "off",
+        "useSimplifiedLogicExpression": "off",
+        "useOptionalChain": "off"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off",
+        "useMediaCaption": "off",
+        "noHeaderScope": "off",
+        "useAltText": "off",
+        "useButtonType": "off"
+      }
+    }
+  },
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 100,
+    "attributePosition": "multiline",
+    "ignore": [
+      ".tamagui",
+      "**/ios/**",
+      "**/android/**",
+      ".vscode",
+      "**/tamagui.css",
+      "**/*.d.ts",
+      "packages/vendor/**",
+      "packages/**/vendor/**",
+      "**/tsconfig.json",
+      "**/dist/**",
+      "**/package.json",
+      ".codesandbox",
+      "tsconfig.base.json"
+    ]
+  },
+  "javascript": {
+    "formatter": {
+      "trailingCommas": "es5",
+      "jsxQuoteStyle": "double",
+      "semicolons": "always",
+      "quoteStyle": "single"
+    },
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+  "vcs": {
+    "enabled": true,
+    "clientKind": "git",
+    "useIgnoreFile": true
+  }
+}

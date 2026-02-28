@@ -1,16 +1,42 @@
 {
-  "$schema": "https://turbo.build/schema.json",
-  "tasks": {
+  "$schema": "https://turborepo.org/schema.json",
+  "globalEnv": [
+    "DISABLE_EXTRACTION",
+    "NODE_ENV",
+    "EAS_BUILD_PLATFORM",
+    "DATABASE_URL"
+  ],
+  "pipeline": {
     "build": {
+      "env": ["DISABLE_EXTRACTION", "NODE_ENV", "EAS_BUILD_PLATFORM"],
       "dependsOn": ["^build"],
-      "outputs": [".next/**", "!.next/cache/**", "dist/**"]
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**",
+        "build/**",
+        "node_modules/.cache/metro/**",
+        "dist/**"
+      ]
     },
     "dev": {
       "cache": false,
       "persistent": true
     },
+    "db:generate": {
+      "cache": false
+    },
+    "db:push": {
+      "cache": false
+    },
     "lint": {
-      "dependsOn": ["^build"]
+      "cache": false
+    },
+    "format": {
+      "cache": false
+    },
+    "typecheck": {
+      "dependsOn": ["^build"],
+      "cache": false
     }
   }
 }

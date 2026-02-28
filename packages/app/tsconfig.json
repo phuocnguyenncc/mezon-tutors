@@ -1,0 +1,20 @@
+{
+  "extends": "../../tsconfig.base",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "react-jsx",
+    "paths": {
+      "@mezon-tutors/app/*": [
+        "./packages/app/*"
+      ],
+      "@mezon-tutors/app/ui/*": [
+        "./packages/app/ui/*"
+      ]
+    }
+  },
+  "references": []
+}
